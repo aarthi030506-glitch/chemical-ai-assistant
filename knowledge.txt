@@ -1,0 +1,41 @@
+CHEMICAL ENGINEERING KNOWLEDGE BASE
+
+DISTILLATION
+
+Distillation is a separation process used to separate components of a liquid mixture based on differences in their volatility or boiling points. In a distillation column, vapor and liquid phases come into contact repeatedly, allowing the more volatile component to become concentrated in the vapor phase.
+
+The reboiler supplies heat to generate vapor. The condenser removes heat from the overhead vapor and converts it into liquid. The distillate is the overhead product, while the bottoms product leaves from the bottom of the column.
+
+Reflux is the portion of condensed overhead liquid that is returned to the distillation column. Increasing reflux generally improves separation but also increases energy consumption.
+
+The reflux ratio is the ratio of liquid returned to the column as reflux to the liquid withdrawn as distillate.
+
+HEAT EXCHANGERS
+
+A heat exchanger is equipment used to transfer heat between two fluids without necessarily mixing them. In a shell-and-tube heat exchanger, one fluid flows through tubes while another fluid flows around the tubes inside the shell.
+
+The basic heat-transfer relationship is:
+
+Q = m Cp Delta T
+
+where Q is heat transferred, m is mass flow rate, Cp is specific heat capacity, and Delta T is the temperature change.
+
+REYNOLDS NUMBER
+
+Reynolds number is a dimensionless quantity used to characterize fluid flow. It helps determine whether flow is likely to be laminar or turbulent.
+
+For flow inside a circular pipe:
+
+Re = rho v D / mu
+
+where rho is fluid density, v is average velocity, D is pipe diameter, and mu is dynamic viscosity.
+
+For many internal pipe-flow situations, low Reynolds numbers indicate laminar flow while sufficiently high Reynolds numbers indicate turbulent flow.
+
+IDEAL GAS LAW
+
+The ideal gas law relates pressure, volume, temperature, and amount of gas:
+
+PV = nRT
+
+where P is pressure, V is volume, n is number of moles, R is the gas constant, and T is absolute temperature.
