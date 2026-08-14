@@ -70,7 +70,7 @@ st.markdown("""
 
 load_dotenv()
 
-api_key = st.secrets("GEMINI_API_KEY")
+api_key = st.secrets["GEMINI_API_KEY"]
 
 if not api_key:
     st.error("❌ Gemini API key not found. Please check your .env file.")
