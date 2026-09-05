@@ -1,50 +1,142 @@
 # 🧪 Chemical Engineering AI Assistant
 
-An AI-powered Chemical Engineering assistant built using **Python, Google Gemini, RAG, embeddings, function calling, and Streamlit**.
+An AI-powered Chemical Engineering application built using **Python, Streamlit, Scikit-learn, and Google Gemini AI**.
 
-The application can answer Chemical Engineering questions using a custom knowledge base and perform engineering calculations using Python tools.
-
----
-
-## 🎯 Project Overview
-
-The goal of this project is to build an AI assistant specifically for Chemical Engineering.
-
-Instead of relying only on the general knowledge of an LLM, the application uses **Retrieval-Augmented Generation (RAG)** to retrieve relevant information from a custom Chemical Engineering knowledge base.
-
-For numerical calculations, the AI can use dedicated Python functions instead of relying on the language model to perform arithmetic.
+The application helps users ask Chemical Engineering questions and receive AI-generated answers supported by relevant information retrieved from a local knowledge base.
 
 ---
 
 ## 🚀 Features
 
-### 📚 RAG-based Question Answering
+### 🤖 AI-Powered Assistant
 
-The application:
+- Answers Chemical Engineering-related questions
+- Performs Chemical Engineering domain validation
+- Retrieves relevant information from a local knowledge base
+- Uses Google Gemini AI to generate structured answers
+- Displays recently asked questions
 
-1. Loads Chemical Engineering reference material.
-2. Splits the content into smaller chunks.
-3. Creates embeddings for each chunk.
-4. Converts the user's question into an embedding.
-5. Calculates cosine similarity.
-6. Retrieves the most relevant information.
-7. Sends the retrieved information to Gemini.
-8. Generates the final answer.
+### 📚 Local Knowledge Retrieval
 
-### 🧮 Engineering Calculations
+The application uses a local retrieval system to find relevant information before generating an AI response.
 
-The assistant currently includes Python tools for:
+The retrieval process uses:
+
+- TF-IDF Vectorization
+- Cosine Similarity
+- Top relevant knowledge chunks
+- Retrieval confidence indicator
+
+### 🧮 Chemical Engineering Calculator
+
+The application includes three calculation tools:
 
 - Reynolds Number
-- Ideal Gas Law
+- Ideal Gas Volume
 - Heat Duty
 
-### 🤖 Gemini Function Calling
+---
 
-Gemini can identify when a numerical calculation is required and call the appropriate Python function.
+## 🏗️ System Architecture
 
-For example:
+![Chemical Engineering AI Assistant Architecture](./assets/architecture_diagram.png)
+
+### Application Workflow
 
 ```text
-Calculate Reynolds number for density 1000,
-velocity 2, diameter 0.05 and viscosity 0.001.
+User
+  │
+  ▼
+Streamlit Application
+  │
+  ├───────────────┐
+  ▼               ▼
+AI Assistant   Engineering Calculator
+  │               │
+  │               ├── Reynolds Number
+  │               ├── Ideal Gas Volume
+  │               └── Heat Duty
+  │
+  ▼
+Domain Validation
+  │
+  ▼
+Local Knowledge Base
+  │
+  ▼
+TF-IDF Vectorization
+  │
+  ▼
+Cosine Similarity
+  │
+  ▼
+Relevant Knowledge Retrieval
+  │
+  ▼
+Google Gemini AI
+  │
+  ▼
+Generated Answer
+⚙️ Technology Stack
+Python
+Streamlit
+Google Gemini API
+Scikit-learn
+TF-IDF Vectorization
+Cosine Similarity
+📂 Project Structure
+chemical-ai-assistant/
+│
+├── streamlit_app.py
+├── knowledge.txt
+├── requirements.txt
+├── README.md
+│
+└── assets/
+    └── architecture_diagram.png
+💻 Installation
+
+Clone the repository:
+
+git clone <your-repository-url>
+
+Move into the project folder:
+
+cd chemical-ai-assistant
+
+Create a virtual environment:
+
+python -m venv venv
+
+Activate the environment on Windows:
+
+venv\Scripts\activate
+
+Install the required packages:
+
+pip install -r requirements.txt
+
+Run the application:
+
+streamlit run streamlit_app.py
+🧠 Key Technical Learning
+
+During the development of this project, cloud-based embeddings initially caused API quota limitations.
+
+To improve reliability, the knowledge retrieval system was redesigned using:
+
+Local Knowledge Base → TF-IDF → Cosine Similarity → Relevant Context
+
+This removed the dependency on embedding API quotas for the retrieval process while Gemini AI is used for generating the final response.
+
+🔮 Future Improvements
+Larger Chemical Engineering knowledge base
+PDF document support
+Advanced semantic search
+Conversational memory
+Cloud deployment
+👩‍💻 Author
+
+Aarthi
+
+Chemical Engineering | Artificial Intelligence Project
