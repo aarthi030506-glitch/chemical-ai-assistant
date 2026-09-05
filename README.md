@@ -41,102 +41,51 @@ The application includes three calculation tools:
 
 ![Chemical Engineering AI Assistant Architecture](./assets/architecture_diagram.png)
 
-### Application Workflow
+## ⚙️ Technology Stack
 
-```text
-User
-  │
-  ▼
-Streamlit Application
-  │
-  ├───────────────┐
-  ▼               ▼
-AI Assistant   Engineering Calculator
-  │               │
-  │               ├── Reynolds Number
-  │               ├── Ideal Gas Volume
-  │               └── Heat Duty
-  │
-  ▼
-Domain Validation
-  │
-  ▼
-Local Knowledge Base
-  │
-  ▼
-TF-IDF Vectorization
-  │
-  ▼
-Cosine Similarity
-  │
-  ▼
-Relevant Knowledge Retrieval
-  │
-  ▼
-Google Gemini AI
-  │
-  ▼
-Generated Answer
-⚙️ Technology Stack
-Python
-Streamlit
-Google Gemini API
-Scikit-learn
-TF-IDF Vectorization
-Cosine Similarity
-📂 Project Structure
-chemical-ai-assistant/
-│
-├── streamlit_app.py
-├── knowledge.txt
-├── requirements.txt
-├── README.md
-│
-└── assets/
-    └── architecture_diagram.png
-💻 Installation
+| Technology | Purpose |
+|---|---|
+| 🐍 **Python** | Core programming language |
+| 🌐 **Streamlit** | Interactive web application interface |
+| 🤖 **Google Gemini AI** | AI-powered answer generation |
+| 🧠 **Scikit-learn** | Machine learning and local knowledge retrieval |
+| 📚 **TF-IDF Vectorization** | Converts Chemical Engineering text into numerical representations |
+| 🔍 **Cosine Similarity** | Finds and ranks the most relevant knowledge |
+| 📄 **Local Knowledge Base** | Stores Chemical Engineering reference information in `knowledge.txt` |
+| 🔐 **Git & GitHub** | Version control and project hosting |
 
-Clone the repository:
+## 🧠 Key Technical Learnings
 
-git clone <your-repository-url>
+- Built a **Retrieval-Augmented Generation (RAG)** system for Chemical Engineering questions.
+- Learned how to use **TF-IDF Vectorization** to convert text from a local knowledge base into numerical representations.
+- Used **Cosine Similarity** to retrieve and rank the most relevant knowledge chunks.
+- Integrated **Google Gemini AI** to generate clear and structured answers using retrieved context.
+- Designed the system to avoid repeated cloud embedding requests after encountering **API quota limitations**.
+- Implemented a **local knowledge retrieval system**, reducing dependency on external embedding APIs.
+- Used **Streamlit** to develop an interactive AI-powered web application.
+- Implemented **domain validation** to keep the assistant focused on Chemical Engineering questions.
+- Added a **RAG confidence indicator** based on the relevance score of retrieved knowledge.
+- Integrated basic **Chemical Engineering calculation tools** for Reynolds Number, Ideal Gas Volume, and Heat Duty.
+- Learned to manage sensitive API credentials securely using `.streamlit/secrets.toml` and `.gitignore`.
+- Used **Git and GitHub** for version control and project documentation.
 
-Move into the project folder:
+## 🔮 Future Improvements
 
-cd chemical-ai-assistant
+- 📄 Add support for **PDF, DOCX, and other document uploads** to expand the knowledge base.
+- 🧠 Implement **advanced semantic search and embedding-based retrieval** when scalable API or local embedding resources are available.
+- 💬 Add **multi-turn conversational memory** for follow-up questions and more natural interactions.
+- 📚 Expand the **Chemical Engineering knowledge base** with additional subjects and reference materials.
+- 🧮 Add more advanced **Chemical Engineering calculation and problem-solving capabilities**.
+- 📊 Include **interactive graphs and visualizations** for engineering concepts and calculations.
+- 📁 Allow users to upload their own **Chemical Engineering notes and study materials**.
+- ☁️ Deploy the application to a **cloud platform** for public access.
+- 👤 Add **user profiles and personalized learning features**.
+- 🎤 Explore **voice-based interaction** for a more accessible AI assistant.
 
-Create a virtual environment:
+## 👩‍💻 Author
 
-python -m venv venv
+**Aarthi**
 
-Activate the environment on Windows:
+Chemical Engineering Student | AI & Technology Enthusiast
 
-venv\Scripts\activate
-
-Install the required packages:
-
-pip install -r requirements.txt
-
-Run the application:
-
-streamlit run streamlit_app.py
-🧠 Key Technical Learning
-
-During the development of this project, cloud-based embeddings initially caused API quota limitations.
-
-To improve reliability, the knowledge retrieval system was redesigned using:
-
-Local Knowledge Base → TF-IDF → Cosine Similarity → Relevant Context
-
-This removed the dependency on embedding API quotas for the retrieval process while Gemini AI is used for generating the final response.
-
-🔮 Future Improvements
-Larger Chemical Engineering knowledge base
-PDF document support
-Advanced semantic search
-Conversational memory
-Cloud deployment
-👩‍💻 Author
-
-Aarthi
-
-Chemical Engineering | Artificial Intelligence Project
+Developed the **Chemical Engineering AI Assistant** as an AI-powered learning and engineering assistance system.
